@@ -1,0 +1,82 @@
+<html>
+    <head>
+        {% load static%}
+        <link rel="stylesheet" href="{% static 'style.css' %}"></link>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <title>MOON SQUARE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel=stylesheet href=style.css>
+        <script src="app.js" differ>
+        </script>      
+    </head>
+        <body id="formbody">
+            
+          <nav id="nac" class="navbar navbar-expand-lg fixed-top ">
+            <a class="navbar-brand" href="#">𝐹𝑜𝑜𝒹 𝐹𝒶𝒸𝓉𝑜𝓇𝓎</a>
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/menu" id="navy">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about" id="navy">about</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login" id="navy">Order</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/join" id="navy">Join us</a>
+                </li>    
+              
+                  <li class="nav-item">
+                    <a class="nav-link" href="/test" id="navy">Book</a>
+                  </li> 
+        
+                  
+              </ul>
+            </div>  
+          </nav>
+           
+            <div class="container" class="formy">
+                <div class="formbox">
+
+            <form action="/adduser" class="form form-signup" action="/adduser" method="POST">
+              {% csrf_token %}
+              <h1 id="regy">Register</h1>
+             <div class="class-content">
+                    <label id="labely" for="fname">Name</label><br>
+                    <input type="text" id="fname" name="fname" value="">
+             
+             </div>
+            <div>
+                <label id="labely" for="phonenumber">Mobilenumber</label><br>
+                <input  type="tel" id="phonenumber" name="phone" placeholder="0123456789"   pattern="[0-9]{10}" required><br>
+            </div>
+            <div>
+                <label id="labely" for="mail">Email</label><br>
+                <input type="email" id="mail" name="mail" placeholder="mail@gmail.com"> 
+            </div> 
+            <div>
+                <label id="labely" for="passwordy">Password</label><br>
+                <input type="password" id="passwordy" name="psword" placeholder="Enter your password" >
+            </div>
+            <div>
+             <a href="/login"><button  name="submit" class="submit">submit</button></a>
+             <a href="/login"><p>if already registered click page-header</p></a>
+            </div>
+
+                
+            </form>
+            </div>
+            </div>
+             
+        </body>
+</html>

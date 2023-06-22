@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    { % load static % }
+</head>
+<body>
+    <div class="container-fluid">
+    <div class="col-md-offset-1 col-md-3">
+        <form action="bookydata" method="POST" autocomplete="off">
+           {% csrf_token %}
+           <h3 class="page-header text-primary text-center">Book your table</h3>
+          
+
+             <div class="form-group">
+                <label id="labely1" for="firname" >First name:</label>
+                <input type="text" id="firname"  name="firstname"><br><br>
+                </div>
+                <div class="form-group">
+                    <label id="labely1" for="lasname">Last name:</label>
+                    <input type="text" id="lasname"  name="lastname"><br><br>
+                    </div>
+                    <div class="form-group">
+                    <label id="labely1" for="pernumber">No of persons</label>
+                    <input type="number" id="pernumber"  name="perno" min="1" required><br><br>
+                    </div>
+                    <div class="form-group">
+                    <label id="labely1" for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                    <label id="labely1" for="entrytime">Time</label>
+                    <input type="time" id="entrytime" name="time" required>
+                  </div>
+                  <div class="form-group">
+                    <label id="labely1" for="mob">Mobile</label>
+                    <input   type="tel" id="mob" name="phonenum" required>
+                    </div>
+                    <div class="form-group">
+                    <label id="labely1" for="email">Mail</label>
+                    <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <input type="submit" value="submit">
+
+            
+                </form> 
+         </div>
+</body>
+</html>

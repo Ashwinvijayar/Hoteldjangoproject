@@ -1,0 +1,254 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}"></link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>MOON SQUARE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+
+ .soclink{
+  position: relative;
+  left: 678px;
+ }
+
+
+    </style>
+    </head>
+    <body>
+    
+    
+<nav id="nac" class="navbar navbar-expand-lg fixed-top ">
+    <a class="navbar-brand" href="#">𝐹𝑜𝑜𝒹 𝐹𝒶𝒸𝓉𝑜𝓇𝓎</a>
+    <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/menu" id="navy">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about" id="navy">about</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login" id="navy">Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/join" id="navy">Join us</a>
+        </li>    
+      
+          <li class="nav-item">
+            <a class="nav-link" href="/test" id="navy">Book</a>
+          </li> 
+
+          
+      </ul>
+    </div>  
+  </nav>
+  <!--image slide-->
+  
+  <div id="carouselExampleindicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleindicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleindicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleindicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img  src="{% static 'veg.jpg' %}" style="width: 100%; height: 600px;" id="fr" class="d-block w-100" alt="first slide">
+        <div class="caption">
+          <div id="intro">
+          <section id="textanim">
+          <h1 intro1 style="color:yellow; text-shadow: 20px; font-size: 50px;">Welcome to the food paradise
+            </h1>
+          <h2>where flavours come alive</h2>
+          <h2>Experience the Art of Fine Dining at Food Factory</h2>
+          <h2>Savor Every Bite</h2>
+          
+          <h2>Discover Flavorful Creations</h2>
+        
+          
+          <h2></h2>
+          <h2></h2>
+
+    
+          </section>
+          </div>
+
+        </div>
+        </div>
+        <div class="carousel-item">
+          <div id="new">
+        
+          <img width="100%" height="600px" class="d-block w-100" src="{% static 'discy.jpg' %}" alt="second slide">
+         <div id = "new1"> <h1 style="color: yellow;">Discover your taste buds by us</h1>
+          <div id="new2">
+        <h2> 
+          Our cooks has abudant skills in proffessional and traditonal cooking</h2>
+          <h2>We have all type of cuisines from the world</h2>
+          <h2>The ingredients used in our food are organic</h2>
+          <h2>wehave to feed the needy</h2>
+          <h2>our dishes are best to feed for childhren and toddlers</h2>
+        </div>
+          
+        </div>    
+        </div>  
+        </div>
+          <div class="carousel-item">
+            <img width="100%" height="600px" class="d-block w-100" src="{% static 'pizzaname.jpg' %}" alt="third slide">
+            </div>
+            </div>
+         
+         <a class="carousel-control-prev" href="#carouselExampleindicators" role="button" data-slide="prev" >
+         <span id=colic class="carousel-control-prev-icon" aria-hidden="true"></span> 
+         <span class="sr-only">previous</span>
+        </a> 
+    
+      
+        <a class="carousel-control-next" href="#carouselExampleindicators" role="button" data-slide="next">
+          <span id=colic class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span   class="sr-only">Next</span>
+        </a>
+         
+           
+    </div>
+  </div>
+  <div id=cont class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="box">
+          <div>
+         <img class="img-box" id="cooku" src="{% static 'burger3.jpg' %}">
+          </div>
+          <div class="detail-box">
+
+            <h1 style="font-size: 20px; margin-left: 15px;">𝒯𝒶𝓈𝓉𝓎 𝒯𝒽𝓊𝓇𝓈𝒹𝒶𝓎</h1>
+            <h1 style="height: 10px; margin-left: 10px;">20% <span >offer</span></h1><br>
+            <button id="button1" type="button">
+              <a id="order1" style="color: aliceblue;" href="">Order now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+               <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+             </svg> </a>
+               </button>
+            </div>
+
+          </div>
+         </div>
+    
+      <div class="col-md-6">
+        <div class="box1">
+         
+         <img class="img-box1" id="cooku" src="{% static 'pizza.jpg' %}">
+         
+          
+          <div class="detail-box1">
+            
+            <h1 style="font-size: 20px; margin-left: 15px;">𝐹𝒶𝓃𝓉𝒶𝓈𝓎 𝒻𝓇𝒾𝒹𝒶𝓎</h1>
+            <h1 style="height: 10px; margin-left: 10px;">30% <span >offer</span></h1><br>
+            <button id="button1" type="button">
+           <a id="order1" style="color: aliceblue;" href="">Order now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg> </a>
+            </button>
+            </div>
+
+          </div>
+      </div>
+        </div>
+    </div>
+<div class="container">
+<section class="row">
+  <div class="col-md-6">
+  <h1>we  are glad share our history with you</h1>
+  <p>our hotel started in 1889 in chennai.<br>
+    The special of our hotel is all traditional indian veg and non-veg(halal) dishes cooked traditionally<br>
+    
+  </p>
+
+  </div>
+  <div class="col-md-6">
+    <h1>the cusines available are</h1>
+    <ul>
+      <li>indian</li>
+      <li>arabian</li>
+      <li>chinese</li> 
+      <li>western</li>       
+      </ul>
+    </div>
+  </section>
+
+  </div>
+
+
+
+
+
+
+  <footer id="footy">
+    <section>
+      
+      <div class="container">
+        <div  class="row">
+          <div id="col2" class="col-sm-4">
+          <h1>Opening hours</h1>
+          <h2>Everyday</h2>
+          <h2>10.00AM-10.00PM</h2>
+            
+         
+          </div>
+
+        <div id="col2" class="col-sm-4">
+          <h1 style="font-style: italic;">Food Factory</h1>
+          <p>
+            Indulge in a culinary experience of exquisite flavors and impeccable service.
+            Our talented chefs craft dishes using the finest ingredients,
+            paired with a curated selection of wines and handcrafted cocktails.
+             Join us for an unforgettable dining journey in the heart of coimbatore.
+              Reserve your table today and savor the moment.</p>
+          </div>
+    
+      <div id="col1" class="col-sm-4">
+      <h1>Contact</h1>
+
+      <img id="foot1" src="{% static 'icons8-home-30.png' %}">
+    
+      <h2>Airport,coimbatore</h2>
+      
+      
+      <h2><span class="glyphicon glyphicon-envelope"></span>foodfactory1885@gmail.com</h2>
+      <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+      </svg> 0423-241189</h2>
+    
+
+      </div>
+      </div>
+
+      
+      </div>
+      <h1 style="text-align: center;">@2023 All Rights Reserved By Food Factory</h1>
+      <h3 style="text-align: center;">@Distributed By AV groups</h3>
+      <h2 style="text-align: center;">contact us through</h2>
+      <div class="soclink">
+      <i class="fa fa-instagram" style="font-size:48px;color:red"></i>
+      <i class="fa fa-envelope" style="font-size:48px;color:white"></i>
+      <i class="fa fa-whatsapp" style="font-size:48px;color:rgb(52, 134, 52)"></i>
+      </div>
+     
+
+      </section>
+    </footer>         
+    </body>
+    </html>
+            

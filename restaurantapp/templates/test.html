@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  {% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}"></link>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<title>MOON SQUARE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+  .formbox1{
+    height: 600px;
+    width: 600px;
+    background-color: #213363;
+    margin: 100px;
+  }
+  #labely2{
+      font-size: 20px;
+      color: white;
+  }
+  #bookon{
+    width: 50px;
+    padding: 5px;
+
+  }
+  #firname{
+    width: 100%;
+    height: 30px;
+  }
+  #secname{
+    width: 100%;
+    height: 30px;
+  }
+  #personnumber{
+    width: 100%;
+    height: 30px;
+  }
+  #dateicon{
+    width: 100%;
+    height: 30px;
+  }
+  #timeicon{
+    width:100%;
+    height: 30px;
+  }
+  #mobby{
+    width:100%;
+    height: 30px;
+  }
+  #bookon{
+    width:15%;
+    height: 30px;
+    margin-left: 220px;
+    margin-top: 10px;
+  }
+  #maily{
+    width:100%;
+    height: 30px;
+  }
+</style>
+
+</head>
+<body>
+  <nav id="nac" class="navbar navbar-expand-lg fixed-top ">
+    <a class="navbar-brand" href="#">𝐹𝑜𝑜𝒹 𝐹𝒶𝒸𝓉𝑜𝓇𝓎</a>
+    <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/menu" id="navy">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about" id="navy">about</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login" id="navy">Order</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/join" id="navy">Join us</a>
+        </li>    
+      
+          <li class="nav-item">
+            <a class="nav-link" href="/test" id="navy">Book</a>
+          </li> 
+
+          
+      </ul>
+    </div>  
+  </nav>
+    <div class="container" class="formy1">
+    <div class="formbox1">
+        <form action="/addData" method="POST" autocomplete="off">
+           {% csrf_token %}
+           <h3 class="page-header text-primary text-center">Enter your details</h3>
+            <div class="">
+              <label id="labely2" for="firname">Firstname</label><br>
+              <input type="text"  name="fname" id="firname">
+             </div>
+             <div class="">
+              <label id="labely2" for="secname">Last name</label><br>
+              <input type="text" id="secname"  name="lname" ><br>
+              </div>
+              <div class="">
+              <label id="labely2" for="personnumber">No of persons</label><br>
+              <input type="number" id="personnumber"  name="personno" min="1" required><br><br>
+              </div>
+              <div class="">
+              <label id="labely2" for="dateicon">Date</label><br>
+              <input type="date" id="dateicon" name="dates" required>
+              </div>
+              <div class="">
+              <label id="labely2" for="timeicon">Time</label><br>
+              <input type="time" id="timeicon" name="times" required>
+            </div>
+            <div class="">
+              <label id="labely2" for="mobby">Mobile</label><br>
+              <input   type="tel" id="mobby" name="phonenumb" required>
+              </div>
+              <div class="">
+              <label id="labely2" for="maily">Mail</label><br>
+               <input type="email" id="maily">
+              </div>
+                <div class="booker" >
+                  <input type="submit" value="book" class="btn btn-primary" id="bookon">
+                 </div>
+                </form> 
+                </div>  
+         </div>
+</body>
+</html>

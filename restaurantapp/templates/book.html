@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% load static %}
+  <link rel="stylesheet" href="{% static 'style.css' %}"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <title>MOON SQUARE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    #footy{
+        background-color: dimgray;
+    }
+    #foot1{
+        float: left;
+        height: 25px;
+        
+    }
+    .soclink{
+  position: relative;
+  left: 678px;
+ }
+ .formbox1{
+        width: 600px;
+        height: 500px;
+        background-color:#e4cbff;
+        margin: 100px;
+    
+ }
+
+
+    </style>
+</head>
+<body>
+
+    <nav id="nac" class="navbar navbar-expand-lg fixed-top ">
+    <a class="navbar-brand" href="#">𝐹𝑜𝑜𝒹 𝐹𝒶𝒸𝓉𝑜𝓇𝓎</a>
+    <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/menu" id="navy">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about" id="navy">about</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/order" id="navy">Order</a>
+        </li>
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/join" id="navy">Join us</a>
+        </li>    
+        <li class="nav-item">
+            <a class="nav-link" href="/book" id="navy">Book a table</a>
+          </li> 
+      </ul>
+    </div>  
+  </nav>
+  
+
+  <div class="container-fluid">
+       <div class="formbox1">
+      
+       <form action="bookdata" method="POST" autocomplete="off">
+          {% csrf_token %}
+      
+          
+
+          <fieldset>
+            <h1>Book your table</h1>
+          <div class="form-group">
+          <label for finame="">First name:</label>
+          <input type="text" id="finame"  name="finame"><br><br>
+          </div>
+          
+          <div class="form-group">
+          <label id="labely1" for="laname">Last name:</label>
+          <input type="text" id="laname"  name="laname"><br><br>
+          </div>
+          <div class="form-group">
+          <label id="labely1" for="pernumber">No of persons</label>
+          <input type="number" id="pernumber"  name="pernumber" min="1" required><br><br>
+          </div>
+          <div class="form-group">
+          <label id="labely1" for="entrydate">Date</label>
+          <input type="date" id="entrydate" name="entrydate" required>
+          </div>
+          <div class="form-group">
+          <label id="labely1" for="entrytime">Time</label>
+          <input type="time" id="entrytime" name="entrytime" required>
+        </div>
+        <div class="form-group">
+          <label id="labely1" for="mobile">Mobile</label>
+          <input   type="tel" id="mobile" name="phone" required>
+          </div>
+          <div class="form-group">
+          <label id="labely1" for="mail">Mail</label>
+          <input type="email" id="mail" name="mail" required>
+          </div>
+
+          </fieldset>
+          <input type="submit" value="submit">
+
+        </form>
+       
+    
+   </div>
+
+  </div>
+
+  <footer id="footy">
+    <section>
+      
+      <div class="container">
+        <div  class="row">
+          <div id="col2" class="col-sm-4">
+          <h1>Opening hours</h1>
+          <h2>Everyday</h2>
+          <h2>10.00AM-10.00PM</h2>
+            
+         
+          </div>
+
+        <div id="col2" class="col-sm-4">
+          <h1 style="font-style: italic;">Food Factory</h1>
+          <p>
+            Indulge in a culinary experience of exquisite flavors and impeccable service.
+            Our talented chefs craft dishes using the finest ingredients,
+            paired with a curated selection of wines and handcrafted cocktails.
+             Join us for an unforgettable dining journey in the heart of coimbatore.
+              Reserve your table today and savor the moment.</p>
+          </div>
+    
+      <div id="col1" class="col-sm-4">
+      <h1>Contact</h1>
+
+      <img id="foot1" src="{% static 'icons8-home-30.png' %}">
+    
+      <h2>Airport,coimbatore</h2>
+      
+      
+      <h2><span class="glyphicon glyphicon-envelope"></span>foodfactory1885@gmail.com</h2>
+      <h2><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+      </svg> 0423-241189</h2>
+    
+
+      </div>
+      </div>
+
+      
+      </div>
+      <h1 style="text-align: center;">@2023 All Rights Reserved By Food Factory</h1>
+      <h3 style="text-align: center;">@Distributed By AV groups</h3>
+      <h2 style="text-align: center;">contact us through</h2>
+      <div class="soclink">
+      <i class="fa fa-instagram" style="font-size:48px;color:red"></i>
+      <i class="fa fa-envelope" style="font-size:48px;color:white"></i>
+      <i class="fa fa-whatsapp" style="font-size:48px;color:rgb(52, 134, 52)"></i>
+      </div>
+     
+
+      </section>
+    </footer>  
+</body>
+</html>
